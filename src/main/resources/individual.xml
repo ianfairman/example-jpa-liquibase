@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+    
+    <changeSet id="individual.1" author="ian">
+        <createTable tableName="individual">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="family_id" type="int"/>
+            <column name="first_name" type="varchar(60)"/>
+        </createTable>
+        <addForeignKeyConstraint baseTableName="individual"
+                                 baseColumnNames="family_id"
+                                 constraintName="individual_family_fk"
+                                 referencedTableName="family"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+    <changeSet id="individual.2" author="ian">
+        <sql>
+            insert into individual (first_name, family_id)
+            select 'Bart', family.id from family
+            where family.last_name = 'Simpson';
+        </sql>
+        <sql>
+            insert into individual (first_name, family_id)
+            select 'Homer', family.id from family
+            where family.last_name = 'Simpson';
+        </sql>
+        <sql>
+            insert into individual (first_name, family_id)
+            select 'Marge', family.id from family
+            where family.last_name = 'Simpson';
+        </sql>
+        <sql>
+            insert into individual (first_name, family_id)
+            select 'Fred', family.id from family
+            where family.last_name = 'Flintstone';
+        </sql>
+        <sql>
+            insert into individual (first_name, family_id)
+            select 'Wilma', family.id from family
+            where family.last_name = 'Flintstone';
+        </sql>
+        <sql>
+            insert into individual (first_name, family_id)
+            select 'Betty', family.id from family
+            where family.last_name = 'Rubble';
+        </sql>
+        <sql>
+            insert into individual (first_name, family_id)
+            select 'Barney', family.id from family
+            where family.last_name = 'Rubble';
+        </sql>
+    </changeSet>
+</databaseChangeLog>
