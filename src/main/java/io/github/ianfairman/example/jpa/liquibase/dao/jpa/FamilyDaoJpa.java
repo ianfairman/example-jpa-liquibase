@@ -3,6 +3,7 @@ package io.github.ianfairman.example.jpa.liquibase.dao.jpa;
 import io.github.ianfairman.example.jpa.liquibase.dao.FamilyDao;
 import io.github.ianfairman.example.jpa.liquibase.entity.Family;
 import io.github.ianfairman.example.jpa.liquibase.entity.jpa.FamilyJpa;
+import io.github.ianfairman.example.jpa.liquibase.value.FamilyId;
 import io.github.ianfairman.example.jpa.liquibase.value.LastName;
 import java.util.List;
 import static java.util.Objects.requireNonNull;
@@ -23,9 +24,9 @@ public class FamilyDaoJpa implements FamilyDao {
     }
 
     @Override
-    public Family findById(int id) {
+    public Family findById(FamilyId id) {
         TypedQuery<Family> query = entityManager.createNamedQuery("FamilyJpa.findById", Family.class);
-        query.setParameter("id", id);
+        query.setParameter("id", id.getValue());
         return query.getSingleResult();
     }
 

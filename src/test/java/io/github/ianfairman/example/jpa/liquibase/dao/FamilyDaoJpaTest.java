@@ -42,7 +42,7 @@ public class FamilyDaoJpaTest {
     @Test
     public void shouldRetrieveSimpsonById1() {
         // When
-        Family family = familyDao.findById(1);
+        Family family = familyDao.findById(familyId(1));
 
         // Then
         assertThat(family.getId(), equalTo(familyId(1)));
