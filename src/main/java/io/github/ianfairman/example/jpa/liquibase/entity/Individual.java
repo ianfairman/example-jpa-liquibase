@@ -4,10 +4,6 @@ import io.github.ianfairman.example.jpa.liquibase.value.FirstName;
 import io.github.ianfairman.example.jpa.liquibase.value.IndividualId;
 import javax.persistence.Transient;
 
-/**
- *
- * @author Ian Fairman (ian.fairman@kymab.com)
- */
 public interface Individual {
 
     Family getFamily();

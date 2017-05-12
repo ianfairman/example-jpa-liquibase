@@ -5,10 +5,6 @@ import io.github.ianfairman.example.jpa.liquibase.value.LastName;
 import java.util.List;
 import javax.persistence.Transient;
 
-/**
- *
- * @author Ian Fairman (ian.fairman@kymab.com)
- */
 public interface Family {
 
     @Transient

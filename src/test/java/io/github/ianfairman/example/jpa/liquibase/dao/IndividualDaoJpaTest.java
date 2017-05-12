@@ -1,5 +1,6 @@
 package io.github.ianfairman.example.jpa.liquibase.dao;
 
+import io.github.ianfairman.example.jpa.liquibase.dao.jpa.IndividualDaoJpa;
 import io.github.ianfairman.example.jpa.liquibase.entity.Individual;
 import static io.github.ianfairman.example.jpa.liquibase.value.FirstName.firstName;
 import static io.github.ianfairman.example.jpa.liquibase.value.IndividualId.individualId;
@@ -12,7 +13,7 @@ import static org.junit.Assert.assertThat;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class IndividualDaoTest {
+public class IndividualDaoJpaTest {
 
     private static IndividualDao individualDao;
 
@@ -20,7 +21,7 @@ public class IndividualDaoTest {
     public static void configureDao() {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("people");
         EntityManager em = emf.createEntityManager();
-        individualDao = new IndividualDao(em);
+        individualDao = new IndividualDaoJpa(em);
     }
 
     @Test

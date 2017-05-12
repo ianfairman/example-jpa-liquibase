@@ -1,5 +1,6 @@
 package io.github.ianfairman.example.jpa.liquibase.dao;
 
+import io.github.ianfairman.example.jpa.liquibase.dao.jpa.FamilyDaoJpa;
 import io.github.ianfairman.example.jpa.liquibase.entity.Family;
 import static io.github.ianfairman.example.jpa.liquibase.value.FamilyId.familyId;
 import static io.github.ianfairman.example.jpa.liquibase.value.LastName.lastName;
@@ -12,7 +13,7 @@ import static org.junit.Assert.assertThat;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class FamilyDaoTest {
+public class FamilyDaoJpaTest {
 
     private static FamilyDao familyDao;
     private static EntityManager entityManager;
@@ -21,7 +22,7 @@ public class FamilyDaoTest {
     public static void configureDao() {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("people");
         entityManager = emf.createEntityManager();
-        familyDao = new FamilyDao(entityManager);
+        familyDao = new FamilyDaoJpa(entityManager);
     }
 
     @Test
