@@ -1,11 +1,11 @@
-package io.github.ianfairman.family.dao;
+package io.github.ianfairman.family.repo;
 
 import io.github.ianfairman.family.entity.Individual;
 import io.github.ianfairman.family.value.FirstName;
 import io.github.ianfairman.family.value.IndividualId;
 import java.util.List;
 
-public interface IndividualDao {
+public interface IndividualRepository {
 
     List<Individual> findAll();
 

@@ -1,11 +1,11 @@
-package io.github.ianfairman.family.dao;
+package io.github.ianfairman.family.repo;
 
 import io.github.ianfairman.family.entity.Family;
 import io.github.ianfairman.family.value.FamilyId;
 import io.github.ianfairman.family.value.LastName;
 import java.util.List;
 
-public interface FamilyDao {
+public interface FamilyRepository {
 
     Family create(LastName lastName);
 

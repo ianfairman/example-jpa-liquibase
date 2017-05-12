@@ -1,6 +1,5 @@
-package io.github.ianfairman.family.dao.jpa;
+package io.github.ianfairman.family.repo.jpa;
 
-import io.github.ianfairman.family.dao.IndividualDao;
 import io.github.ianfairman.family.entity.Individual;
 import io.github.ianfairman.family.value.FirstName;
 import io.github.ianfairman.family.value.IndividualId;
@@ -8,12 +7,13 @@ import java.util.List;
 import static java.util.Objects.requireNonNull;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
+import io.github.ianfairman.family.repo.IndividualRepository;
 
-public class IndividualDaoJpa implements IndividualDao {
+public class IndividualRepositoryJpa implements IndividualRepository {
 
     private final EntityManager entityManager;
 
-    public IndividualDaoJpa(EntityManager entityManager) {
+    public IndividualRepositoryJpa(EntityManager entityManager) {
         this.entityManager = requireNonNull(entityManager);
     }
 

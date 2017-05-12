@@ -1,6 +1,5 @@
-package io.github.ianfairman.family.dao.jpa;
+package io.github.ianfairman.family.repo.jpa;
 
-import io.github.ianfairman.family.dao.FamilyDao;
 import io.github.ianfairman.family.entity.Family;
 import io.github.ianfairman.family.entity.jpa.FamilyJpa;
 import io.github.ianfairman.family.value.FamilyId;
@@ -9,12 +8,13 @@ import java.util.List;
 import static java.util.Objects.requireNonNull;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
+import io.github.ianfairman.family.repo.FamilyRepository;
 
-public class FamilyDaoJpa implements FamilyDao {
+public class FamilyRepositoryJpa implements FamilyRepository {
 
     private final EntityManager entityManager;
 
-    public FamilyDaoJpa(EntityManager entityManager) {
+    public FamilyRepositoryJpa(EntityManager entityManager) {
         this.entityManager = requireNonNull(entityManager);
     }
 

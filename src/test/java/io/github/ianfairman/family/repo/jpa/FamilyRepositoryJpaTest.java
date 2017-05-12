@@ -1,7 +1,6 @@
-package io.github.ianfairman.example.jpa.liquibase.dao;
+package io.github.ianfairman.family.repo.jpa;
 
-import io.github.ianfairman.family.dao.FamilyDao;
-import io.github.ianfairman.family.dao.jpa.FamilyDaoJpa;
+import io.github.ianfairman.family.repo.jpa.FamilyRepositoryJpa;
 import io.github.ianfairman.family.entity.Family;
 import static io.github.ianfairman.family.value.FamilyId.familyId;
 import static io.github.ianfairman.family.value.LastName.lastName;
@@ -13,17 +12,18 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertThat;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import io.github.ianfairman.family.repo.FamilyRepository;
 
-public class FamilyDaoJpaTest {
+public class FamilyRepositoryJpaTest {
 
-    private static FamilyDao familyDao;
+    private static FamilyRepository familyDao;
     private static EntityManager entityManager;
 
     @BeforeClass
     public static void configureDao() {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("people");
         entityManager = emf.createEntityManager();
-        familyDao = new FamilyDaoJpa(entityManager);
+        familyDao = new FamilyRepositoryJpa(entityManager);
     }
 
     @Test
