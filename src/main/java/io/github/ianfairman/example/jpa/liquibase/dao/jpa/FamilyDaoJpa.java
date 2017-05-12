@@ -32,7 +32,7 @@ public class FamilyDaoJpa implements FamilyDao {
     @Override
     public List<Family> findByLastName(LastName lastName) {
         TypedQuery<Family> query = entityManager.createNamedQuery("FamilyJpa.findByLastName", Family.class);
-        query.setParameter("lastName", lastName.getValue());
+        query.setParameter("lastName", lastName);
         return query.getResultList();
     }
 

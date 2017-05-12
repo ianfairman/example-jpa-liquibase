@@ -3,7 +3,6 @@ package io.github.ianfairman.example.jpa.liquibase.entity.jpa;
 import io.github.ianfairman.example.jpa.liquibase.entity.Family;
 import io.github.ianfairman.example.jpa.liquibase.entity.Individual;
 import io.github.ianfairman.example.jpa.liquibase.value.FirstName;
-import static io.github.ianfairman.example.jpa.liquibase.value.FirstName.firstName;
 import io.github.ianfairman.example.jpa.liquibase.value.IndividualId;
 import static io.github.ianfairman.example.jpa.liquibase.value.IndividualId.individualId;
 import java.io.Serializable;
@@ -37,7 +36,7 @@ public class IndividualJpa implements Serializable, Individual {
     @Column(name = "ID")
     private Integer id;
     @Column(name = "FIRST_NAME")
-    private String firstName;
+    private FirstName firstName;
     @JoinColumn(name = "FAMILY_ID", referencedColumnName = "ID")
     @ManyToOne(targetEntity = FamilyJpa.class)
     private Family family;
@@ -68,13 +67,13 @@ public class IndividualJpa implements Serializable, Individual {
     @Transient
     @Override
     public FirstName getFirstName() {
-        return firstName(firstName);
+        return firstName;
     }
 
     @Transient
     @Override
     public void setFirstName(FirstName firstName) {
-        this.firstName = firstName.getValue();
+        this.firstName = firstName;
     }
 
     @Override

@@ -1,13 +1,14 @@
 package io.github.ianfairman.example.jpa.liquibase.value;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class LastName {
+public class LastName implements Serializable {
 
     public static LastName lastName(String lastNameString) {
         return new LastName(lastNameString);
     }
-    
+
     private final String value;
 
     public LastName(String value) {

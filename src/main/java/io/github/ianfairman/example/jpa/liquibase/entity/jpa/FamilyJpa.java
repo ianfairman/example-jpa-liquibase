@@ -5,7 +5,6 @@ import io.github.ianfairman.example.jpa.liquibase.entity.Individual;
 import io.github.ianfairman.example.jpa.liquibase.value.FamilyId;
 import static io.github.ianfairman.example.jpa.liquibase.value.FamilyId.familyId;
 import io.github.ianfairman.example.jpa.liquibase.value.LastName;
-import static io.github.ianfairman.example.jpa.liquibase.value.LastName.lastName;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Basic;
@@ -37,7 +36,7 @@ public class FamilyJpa implements Serializable, Family {
     @Column(name = "ID")
     private Integer id;
     @Column(name = "LAST_NAME")
-    private String lastName;
+    private LastName lastName;
     @OneToMany(targetEntity = IndividualJpa.class, mappedBy = "family")
     private List<Individual> individualList;
 
@@ -67,13 +66,13 @@ public class FamilyJpa implements Serializable, Family {
     @Transient
     @Override
     public LastName getLastName() {
-        return lastName(lastName);
+        return lastName;
     }
 
     @Transient
     @Override
     public void setLastName(LastName lastName) {
-        this.lastName = lastName.getValue();
+        this.lastName = lastName;
     }
 
     @Override
