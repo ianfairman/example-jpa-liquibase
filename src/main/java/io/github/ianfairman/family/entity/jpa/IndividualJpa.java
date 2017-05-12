@@ -1,10 +1,10 @@
-package io.github.ianfairman.example.jpa.liquibase.entity.jpa;
+package io.github.ianfairman.family.entity.jpa;
 
-import io.github.ianfairman.example.jpa.liquibase.entity.Family;
-import io.github.ianfairman.example.jpa.liquibase.entity.Individual;
-import io.github.ianfairman.example.jpa.liquibase.value.FirstName;
-import io.github.ianfairman.example.jpa.liquibase.value.IndividualId;
-import static io.github.ianfairman.example.jpa.liquibase.value.IndividualId.individualId;
+import io.github.ianfairman.family.entity.Family;
+import io.github.ianfairman.family.entity.Individual;
+import io.github.ianfairman.family.value.FirstName;
+import io.github.ianfairman.family.value.IndividualId;
+import static io.github.ianfairman.family.value.IndividualId.individualId;
 import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;

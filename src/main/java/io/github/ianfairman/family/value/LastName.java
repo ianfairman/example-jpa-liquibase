@@ -1,17 +1,17 @@
-package io.github.ianfairman.example.jpa.liquibase.value;
+package io.github.ianfairman.family.value;
 
 import java.io.Serializable;
 import java.util.Objects;
 
-public class FirstName implements Serializable {
+public class LastName implements Serializable {
 
-    public static FirstName firstName(String firstNameString) {
-        return new FirstName(firstNameString);
+    public static LastName lastName(String lastNameString) {
+        return new LastName(lastNameString);
     }
 
     private final String value;
 
-    public FirstName(String value) {
+    public LastName(String value) {
         this.value = value;
     }
 
@@ -22,7 +22,7 @@ public class FirstName implements Serializable {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 79 * hash + Objects.hashCode(this.value);
+        hash = 67 * hash + Objects.hashCode(this.value);
         return hash;
     }
 
@@ -34,7 +34,7 @@ public class FirstName implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final FirstName other = (FirstName) obj;
+        final LastName other = (LastName) obj;
         if (!Objects.equals(this.value, other.value)) {
             return false;
         }

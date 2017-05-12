@@ -3,10 +3,10 @@
   <persistence-unit name="people" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <!-- If entities are defined in this file then Converters must be too -->
-    <class>io.github.ianfairman.example.jpa.liquibase.value.jpa.FirstNameConverter</class>
-    <class>io.github.ianfairman.example.jpa.liquibase.value.jpa.LastNameConverter</class>
-    <class>io.github.ianfairman.example.jpa.liquibase.entity.jpa.FamilyJpa</class>
-    <class>io.github.ianfairman.example.jpa.liquibase.entity.jpa.IndividualJpa</class>
+    <class>io.github.ianfairman.family.entity.jpa.IndividualJpa</class>
+    <class>io.github.ianfairman.family.entity.jpa.FamilyJpa</class>
+    <class>io.github.ianfairman.family.value.jpa.LastNameConverter</class>
+    <class>io.github.ianfairman.family.value.jpa.FirstNameConverter</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:file:target/exampledb"/>
       <property name="javax.persistence.jdbc.password" value=""/>

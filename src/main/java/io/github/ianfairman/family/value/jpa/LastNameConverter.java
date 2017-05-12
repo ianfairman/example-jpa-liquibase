@@ -1,7 +1,7 @@
-package io.github.ianfairman.example.jpa.liquibase.value.jpa;
+package io.github.ianfairman.family.value.jpa;
 
-import io.github.ianfairman.example.jpa.liquibase.value.LastName;
-import static io.github.ianfairman.example.jpa.liquibase.value.LastName.lastName;
+import io.github.ianfairman.family.value.LastName;
+import static io.github.ianfairman.family.value.LastName.lastName;
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
 

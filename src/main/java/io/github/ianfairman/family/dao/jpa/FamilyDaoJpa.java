@@ -1,10 +1,10 @@
-package io.github.ianfairman.example.jpa.liquibase.dao.jpa;
+package io.github.ianfairman.family.dao.jpa;
 
-import io.github.ianfairman.example.jpa.liquibase.dao.FamilyDao;
-import io.github.ianfairman.example.jpa.liquibase.entity.Family;
-import io.github.ianfairman.example.jpa.liquibase.entity.jpa.FamilyJpa;
-import io.github.ianfairman.example.jpa.liquibase.value.FamilyId;
-import io.github.ianfairman.example.jpa.liquibase.value.LastName;
+import io.github.ianfairman.family.dao.FamilyDao;
+import io.github.ianfairman.family.entity.Family;
+import io.github.ianfairman.family.entity.jpa.FamilyJpa;
+import io.github.ianfairman.family.value.FamilyId;
+import io.github.ianfairman.family.value.LastName;
 import java.util.List;
 import static java.util.Objects.requireNonNull;
 import javax.persistence.EntityManager;

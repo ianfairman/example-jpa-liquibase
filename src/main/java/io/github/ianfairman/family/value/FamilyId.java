@@ -1,17 +1,17 @@
-package io.github.ianfairman.example.jpa.liquibase.value;
+package io.github.ianfairman.family.value;
 
 import java.util.Objects;
 import static java.util.Objects.requireNonNull;
 
-public class IndividualId {
-    
-    public static IndividualId individualId(Integer value) {
-        return new IndividualId(value);
+public class FamilyId {
+
+    public static FamilyId familyId(Integer value) {
+        return new FamilyId(value);
     }
     
     private final Integer value;
 
-    public IndividualId(Integer value) {
+    public FamilyId(Integer value) {
         requireNonNull(value);
         if (value < 0) {
             throw new IllegalArgumentException("value should not be negative");
@@ -26,7 +26,7 @@ public class IndividualId {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 89 * hash + Objects.hashCode(this.value);
+        hash = 41 * hash + Objects.hashCode(this.value);
         return hash;
     }
 
@@ -38,7 +38,7 @@ public class IndividualId {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final IndividualId other = (IndividualId) obj;
+        final FamilyId other = (FamilyId) obj;
         if (!Objects.equals(this.value, other.value)) {
             return false;
         }

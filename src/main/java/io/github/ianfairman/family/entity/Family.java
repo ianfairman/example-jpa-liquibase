@@ -1,7 +1,7 @@
-package io.github.ianfairman.example.jpa.liquibase.entity;
+package io.github.ianfairman.family.entity;
 
-import io.github.ianfairman.example.jpa.liquibase.value.FamilyId;
-import io.github.ianfairman.example.jpa.liquibase.value.LastName;
+import io.github.ianfairman.family.value.FamilyId;
+import io.github.ianfairman.family.value.LastName;
 import java.util.List;
 import javax.persistence.Transient;
 

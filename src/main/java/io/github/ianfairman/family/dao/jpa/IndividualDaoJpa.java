@@ -1,9 +1,9 @@
-package io.github.ianfairman.example.jpa.liquibase.dao.jpa;
+package io.github.ianfairman.family.dao.jpa;
 
-import io.github.ianfairman.example.jpa.liquibase.dao.IndividualDao;
-import io.github.ianfairman.example.jpa.liquibase.entity.Individual;
-import io.github.ianfairman.example.jpa.liquibase.value.FirstName;
-import io.github.ianfairman.example.jpa.liquibase.value.IndividualId;
+import io.github.ianfairman.family.dao.IndividualDao;
+import io.github.ianfairman.family.entity.Individual;
+import io.github.ianfairman.family.value.FirstName;
+import io.github.ianfairman.family.value.IndividualId;
 import java.util.List;
 import static java.util.Objects.requireNonNull;
 import javax.persistence.EntityManager;
