@@ -41,7 +41,7 @@ public class IndividualDaoJpaTest {
     @Test
     public void shouldRetrieveHomerById1() {
         // When
-        Individual individual = individualDao.findById(1);
+        Individual individual = individualDao.findById(individualId(1));
 
         // Then
         assertThat(individual.getId(), equalTo(individualId(1)));
